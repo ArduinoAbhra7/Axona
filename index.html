@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo-icon.png" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Axona™ | Workspace</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* Default fallback styling for non-JS / AdSense Crawlers */
+    #static-fallback-seo {
+      display: block;
+    }
+    #loading-splash {
+      display: none;
+    }
+
+    /* JS Enabled Styles (Real Users) */
+    html.js-enabled #static-fallback-seo {
+      display: none !important;
+    }
+    
+    html.js-enabled #loading-splash {
+      display: flex !important;
+      height: 100vh;
+      width: 100vw;
+      align-items: center;
+      justify-content: center;
+      background: #001e1e; /* matches --bg-darker exactly */
+      color: #2dd4bf; /* matches --primary exactly */
+      font-family: 'Outfit', 'Inter', sans-serif;
+      flex-direction: column;
+      gap: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99999;
+      box-sizing: border-box;
+    }
+
+    /* Pulse animation matching React loader */
+    @keyframes pulse-logo {
+      0%, 100% { opacity: 0.6; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    html.js-enabled #loading-splash .logo {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #2dd4bf 0%, #06b6d4 50%, #38bdf8 100%); /* matches --gradient-neural exactly */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse-logo 1.5s infinite ease-in-out;
+      line-height: 1.2;
+    }
+
+    html.js-enabled #loading-splash .text {
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+      color: #2dd4bf;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+  </style>
+  <script>
+    document.documentElement.classList.add('js-enabled');
+  </script>
+  <script src="vite.config.ts"></script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- Beautiful Loading Splash (shown to real users while JS downloads) -->
+    <div id="loading-splash">
+      <div class="logo">A</div>
+      <div class="text">INITIALIZING AXONA™...</div>
+    </div>
+
+    <!-- Static HTML Fallback for AdSense Crawler & SEO Indexing (hidden from real users via JS) -->
+    <div id="static-fallback-seo">
+    <header style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+      <div style="font-size: 1.5rem; font-weight: 700; color: #2dd4bf; font-family: sans-serif;">Axona™</div>
+      <nav>
+        <a href="#features" style="color: #94a3b8; text-decoration: none; margin-left: 1.5rem; font-family: sans-serif; font-size: 0.9rem;">Features</a>
+        <a href="#about" style="color: #94a3b8; text-decoration: none; margin-left: 1.5rem; font-family: sans-serif; font-size: 0.9rem;">About</a>
+        <a href="#faq" style="color: #94a3b8; text-decoration: none; margin-left: 1.5rem; font-family: sans-serif; font-size: 0.9rem;">FAQ</a>
+      </nav>
+    </header>
+
+    <main style="max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem;">
+      <section style="text-align: center; margin-bottom: 4rem;">
+        <h1 style="font-size: 3rem; font-family: sans-serif; color: #ffffff; margin-bottom: 1.5rem;">Axona™ - High-Performance AI Study Workspace</h1>
+        <p style="font-size: 1.25rem; color: #94a3b8; line-height: 1.6; max-width: 800px; margin: 0 auto; font-family: sans-serif;">
+          Supercharge your learning with an elite, integrated cognitive workspace. Designed specifically for students preparing for competitive exams like JEE, NEET, and board exams.
+        </p>
+      </section>
+
+      <section id="features" style="margin-bottom: 4rem;">
+        <h2 style="font-size: 2rem; color: #2dd4bf; font-family: sans-serif; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem;">Core Features</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <div style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.01);">
+            <h3 style="color: #ffffff; font-family: sans-serif; margin-bottom: 0.75rem;">Atlas™ - AI Planner</h3>
+            <p style="color: #94a3b8; font-family: sans-serif; line-height: 1.5; font-size: 0.95rem;">
+              Generate highly customized, time-blocked daily and weekly schedules. Atlas optimizes your time based on your weak topics and study goals.
+            </p>
+          </div>
+          <div style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.01);">
+            <h3 style="color: #ffffff; font-family: sans-serif; margin-bottom: 0.75rem;">NeuroLog™ - Study Diary</h3>
+            <p style="color: #94a3b8; font-family: sans-serif; line-height: 1.5; font-size: 0.95rem;">
+              Log your daily study sessions, track topics covered, and sync progress automatically to your personal cloud-connected analytics dashboard.
+            </p>
+          </div>
+          <div style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.01);">
+            <h3 style="color: #ffffff; font-family: sans-serif; margin-bottom: 0.75rem;">Momentum™ - Study Tracker</h3>
+            <p style="color: #94a3b8; font-family: sans-serif; line-height: 1.5; font-size: 0.95rem;">
+              Track your focus metrics, streak history, and total hours studied with rich data visualizations. Stay accountable and build long-term habits.
+            </p>
+          </div>
+          <div style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.01);">
+            <h3 style="color: #ffffff; font-family: sans-serif; margin-bottom: 0.75rem;">Recall™ - AI Revision</h3>
+            <p style="color: #94a3b8; font-family: sans-serif; line-height: 1.5; font-size: 0.95rem;">
+              Generate AI-powered active recall cards and summary notes. Turn your weaknesses into flashcard decks automatically.
+            </p>
+          </div>
+          <div style="padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; background: rgba(255,255,255,0.01);">
+            <h3 style="color: #ffffff; font-family: sans-serif; margin-bottom: 0.75rem;">Oracle™ - Doubt Solver</h3>
+            <p style="color: #94a3b8; font-family: sans-serif; line-height: 1.5; font-size: 0.95rem;">
+              Resolve your doubts instantly with step-by-step mathematical and conceptual derivations powered by high-speed Groq AI.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" style="margin-bottom: 4rem;">
+        <h2 style="font-size: 2rem; color: #2dd4bf; font-family: sans-serif; margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem;">About Axona™</h2>
+        <p style="font-size: 1.05rem; color: #94a3b8; line-height: 1.6; font-family: sans-serif;">
+          Axona is designed to solve the cognitive load issues faced by high-school and college prep students. By integrating 3D spatial environments, deep focus timers with binaural audio, and advanced AI agents, Axona delivers a premium environment for academic success. Developed by Abhranil Sen to empower scholars worldwide.
+        </p>
+      </section>
+
+      <section id="faq" style="margin-bottom: 4rem;">
+        <h2 style="font-size: 2rem; color: #2dd4bf; font-family: sans-serif; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem;">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; font-family: sans-serif;">
+          <div>
+            <h4 style="color: #ffffff; margin-bottom: 0.5rem; font-size: 1.1rem;">Is Axona cloud-connected?</h4>
+            <p style="color: #94a3b8; line-height: 1.5;">Yes, all study stats, diary entries, and custom syllabus trackers are fully synced to Google Firestore, enabling cloud access across all your devices.</p>
+          </div>
+          <div>
+            <h4 style="color: #ffffff; margin-bottom: 0.5rem; font-size: 1.1rem;">How does the AI Doubt Solver (Oracle™) work?</h4>
+            <p style="color: #94a3b8; line-height: 1.5;">Oracle uses state-of-the-art LLMs via Groq Cloud to provide extremely fast, detailed explanations, derivations, and hints for complex math and science questions.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer style="margin-top: 4rem; padding: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-family: sans-serif;">
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem;">Engineered for high-performance students by <strong>Abhranil Sen</strong>.</p>
+        <div style="margin-bottom: 1rem;">
+          <a href="/privacy" style="color: #2dd4bf; text-decoration: none; font-size: 0.8rem; margin: 0 0.75rem;">Privacy Policy</a>
+          <a href="/terms" style="color: #2dd4bf; text-decoration: none; font-size: 0.8rem; margin: 0 0.75rem;">Terms of Service</a>
+          <a href="mailto:senabhranil7@gmail.com" style="color: #2dd4bf; text-decoration: none; font-size: 0.8rem; margin: 0 0.75rem;">Contact Support</a>
+          <a href="https://wa.me/918637829022" target="_blank" rel="noopener noreferrer" style="color: #2dd4bf; text-decoration: none; font-size: 0.8rem; margin: 0 0.75rem; display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;">
+              <path d="M12.012 2c-5.506 0-9.988 4.482-9.988 9.988 0 1.76.457 3.473 1.328 4.984l-1.411 5.152 5.275-1.383c1.458.796 3.1 1.218 4.782 1.219h.004c5.507 0 9.99-4.482 9.99-9.99 0-2.67-1.038-5.178-2.924-7.066-1.887-1.886-4.394-2.923-7.066-2.923zm5.82 13.916c-.24.673-1.185 1.282-1.637 1.34-.45.059-.894.27-2.906-.525-2.58-.98-4.225-3.606-4.354-3.777-.128-.17-1.04-1.387-1.04-2.646 0-1.26.657-1.876.892-2.112.235-.236.516-.296.69-.296.173 0 .346.002.497.009.157.007.368-.059.576.444.214.516.732 1.782.796 1.913.064.13.107.282.02.456-.086.173-.129.282-.259.434-.13.15-.27.338-.387.456-.13.13-.266.27-.114.53.15.258.673 1.112 1.442 1.798.993.886 1.83 1.157 2.09 1.287.26.13.412.108.563-.065.152-.174.65-.758.824-1.018.174-.26.347-.217.585-.13.238.087 1.517.716 1.777.847.26.13.434.195.498.304.065.109.065.63-.175 1.303z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/abhrax7/?__pwa=1#" target="_blank" rel="noopener noreferrer" style="color: #2dd4bf; text-decoration: none; font-size: 0.8rem; margin: 0 0.75rem; display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            Instagram
+          </a>
+        </div>
+        <p style="color: #64748b; font-size: 0.75rem;">&copy; 2026 Axona&trade;. All Rights Reserved.</p>
+      </footer>
+    </main>
+    </div> <!-- Closes #static-fallback-seo -->
+  </div> <!-- Closes #root -->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
