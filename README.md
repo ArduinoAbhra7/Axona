@@ -3,7 +3,6 @@
 > **A futuristic, full-stack cognitive study ecosystem built for students who demand deep focus, algorithmic curriculum tracking, and spatial ambient immersion.**
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-axona--as.vercel.app-6366f1?style=for-the-badge&logo=vercel)](https://axona-as.vercel.app)
-[![Hack Club](https://img.shields.io/badge/Hack%20Club-Stardance%202026-ec3750?style=for-the-badge)](https://hackclub.com)
 [![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20TypeScript%20%7C%20Three.js%20%7C%20Firebase-0ea5e9?style=for-the-badge)](https://react.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
